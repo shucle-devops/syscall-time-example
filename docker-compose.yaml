@@ -5,6 +5,8 @@ services:
         environment:
         - RUN_ENV=CONTAINER
         privileged: true
+        stdin_open: true
+        tty: true
     postgres:
         image: postgres:12
         container_name: postgres
