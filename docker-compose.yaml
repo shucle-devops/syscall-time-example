@@ -1,0 +1,14 @@
+version: "3"
+services:
+    this-example:
+        image: this-example
+        environment:
+        - RUN_ENV=CONTAINER
+        privileged: true
+    postgres:
+        image: postgres:12
+        container_name: postgres
+        environment:
+        - POSTGRES_PASSWORD=postgres
+        ports:
+        - "5432:5432"

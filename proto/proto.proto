@@ -1,0 +1,15 @@
+syntax = "proto3";
+option go_package = "github.com/yeongjukang/syscall-time-example/proto";
+package proto;
+service ExampleService {
+    rpc PostgresExample (Request) returns (Reply) {}
+  }
+  
+  message Request {
+    int32 count = 1;
+  }
+  
+  message Reply {
+    string last_ptypes_time = 1;
+    string last_pg_time = 2;
+  }
